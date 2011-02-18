@@ -1,0 +1,11 @@
+(ns got-eggs.core
+  (:require [appengine-magic.core :as ae]))
+
+
+(defn got-eggs-app-handler [request]
+  {:status 200
+   :headers {"Content-Type" "text/plain"}
+   :body "Hello, world 32!"})
+
+
+(ae/def-appengine-app got-eggs-app #'got-eggs-app-handler)

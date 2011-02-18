@@ -1,0 +1,1 @@
+e:\appengine-java-sdk\bin\appcfg.cmd update e:\got-eggs\resources
