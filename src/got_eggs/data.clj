@@ -12,8 +12,6 @@
 
 ;; Inventory
 (ds/defentity InventoryEntry () ((count) (timestamp)))
-;; (defn inventory-entry [count]
-;;   (inventory-entry {:count count :timestamp (java.util.Date.)}))
 (extend InventoryEntry
   dsp/LifecycleProtocol
   :after-save (fn [entity] (ds/update-entity entity {:timestamp (Date.)})))
